@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class CalculoAreas {
 
 	static Scanner leer = new Scanner(System.in);
+	private static final double pi = 3.14;
 	
 	public static void main(String[] args) {
 		
@@ -14,6 +15,9 @@ public class CalculoAreas {
 		double radio = pedirRadio();
 		System.out.println("El area de la circunferencia con radio "+radio+" es "+areaCircunferencia(radio));
 		System.out.println("El perímetro de la circunferencia con radio "+radio+" es "+perimetroCircunferencia(radio));
+		
+		double areacil = calcularAreaCilindro(pedirRadio(), pedirAltura());
+		System.out.println("El area del cilindro es: " + areacil);
 		
 
 	}
@@ -80,6 +84,12 @@ public class CalculoAreas {
 			public static double perimetroCircunferencia(double radio) {
 				return 2*3.14*radio;
 				
+			}
+			
+		//Area cilindro
+			public static double calcularAreaCilindro(double radio, double altura) {
+				double area = (2*pi) * radio * altura + (2*pi) * (radio * radio);
+				return area;
 			}
 
 }
