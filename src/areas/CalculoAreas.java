@@ -22,6 +22,9 @@ public class CalculoAreas {
 		double areaRectangulo = calcularAreaRectangulo(pedirLado(),pedirLado());
 		System.out.println("El area del rectangulo es: " + areaRectangulo);
 		
+		double volumenCubo = calcularVolumenCubo(pedirLado());
+		System.out.println("El volumen del cubo es: " + volumenCubo);
+		
 
 	}
 	
@@ -113,6 +116,12 @@ public class CalculoAreas {
 				}while(lado1<1);
 				return lado1;
 
+			}
+			
+		//volumen cubo
+			public static double calcularVolumenCubo(double lado) {
+				double volumen = lado * lado * lado;
+				return volumen;
 			}
 
 }
