@@ -19,6 +19,9 @@ public class CalculoAreas {
 		double areacil = calcularAreaCilindro(pedirRadio(), pedirAltura());
 		System.out.println("El area del cilindro es: " + areacil);
 		
+		double areaRectangulo = calcularAreaRectangulo(pedirLado(),pedirLado());
+		System.out.println("El area del rectangulo es: " + areaRectangulo);
+		
 
 	}
 	
@@ -90,6 +93,26 @@ public class CalculoAreas {
 			public static double calcularAreaCilindro(double radio, double altura) {
 				double area = (2*pi) * radio * altura + (2*pi) * (radio * radio);
 				return area;
+			}
+			// area rectangulo
+			
+			public static double calcularAreaRectangulo(double lado1, double lado2) {
+
+				return lado1*lado2;
+			}
+		//pedir lado rectangulo
+			public static double pedirLado() {
+				double lado1=0;
+				do {
+					System.out.println("Introduzca lado del rectangulo-> ");
+					lado1 = leer.nextDouble();
+					
+					if(lado1<1)
+						System.err.println("Error, no puede ser menor que 0");
+					
+				}while(lado1<1);
+				return lado1;
+
 			}
 
 }
